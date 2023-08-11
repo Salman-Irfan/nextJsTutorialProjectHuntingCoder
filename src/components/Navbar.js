@@ -1,15 +1,16 @@
+import Link from "next/link";
 import React from "react";
-
 const Navbar = () => {
 	return (
 		<div>
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div className="container-fluid">
-					<a
+					<Link
 						className="navbar-brand"
-						href="#">
+						href="/">
 						Hunting Coder
-					</a>
+					</Link>
+					Hunting Coder
 					<button
 						className="navbar-toggler"
 						type="button"
@@ -25,36 +26,34 @@ const Navbar = () => {
 						id="navbarSupportedContent">
 						<ul className="navbar-nav mx-auto mb-2 mb-lg-0">
 							<li className="nav-item">
-								<a
+								<Link
 									className="nav-link active"
 									aria-current="page"
-									href="#">
-									Home
-								</a>
+									href="/">Home</Link>
 							</li>
 							<li className="nav-item">
-								<a
+								<Link
 									className="nav-link active"
 									aria-current="page"
 									href="/about">
 									About
-								</a>
+								</Link>
 							</li>
 							<li className="nav-item">
-								<a
+								<Link
 									className="nav-link active"
 									aria-current="page"
 									href="/contact">
 									Contact
-								</a>
+								</Link>
 							</li>
 							<li className="nav-item">
-								<a
+								<Link
 									className="nav-link active"
 									aria-current="page"
 									href="blog">
 									Blog
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>

@@ -1,0 +1,51 @@
+/* main-heading.css */
+/* Add a fade-in animation to the heading text */
+.main-heading h1 {
+    
+    transform: translateX(-20rem);
+    animation: fadeInFromLeft 1s ease forwards;
+}
+
+.main-heading p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInFromLeft {
+    to {
+        
+        transform: translateX(20rem);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* image.module.css */
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 1rem;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.coderImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid red !important;
+    opacity: 0.5;
+    position: relative;
+    left: 2rem;
+}

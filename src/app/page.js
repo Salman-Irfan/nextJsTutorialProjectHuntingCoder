@@ -5,8 +5,7 @@ import Blog from '@/components/Blog';
 
 export default function Home() {
   return (
-		<main>
-			<Navbar />
+    <main>
       <MainHeading />
       <Blog/>
 		</main>
