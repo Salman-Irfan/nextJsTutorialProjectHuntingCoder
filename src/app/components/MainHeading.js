@@ -1,7 +1,8 @@
 import React from "react";
-import styles from "../styles/main-heading.css";
+// import styles from "../../styles/main-heading.css";
+import styles  from "../../styles/main-heading.css"
 import Image from "next/image";
-import imageStyles from "../styles/mainHeading/image.module.css";
+import imageStyles from "../../styles/mainHeading/image.module.css";
 
 const MainHeading = () => {
 	return (
