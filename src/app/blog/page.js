@@ -2,8 +2,7 @@ import React from "react";
 import styles from "../../styles/blog/blog.module.css";
 import Link from "next/link";
 
-
-const  BlogsFrontEnd = async () =>  {
+const BlogsFrontEnd = async () => {
 	const blogs = await fetchBlogs();
 	return (
 		<div className="container">
