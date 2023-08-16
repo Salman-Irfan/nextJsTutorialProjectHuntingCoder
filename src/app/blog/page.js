@@ -4,6 +4,9 @@ import Link from "next/link";
 
 const BlogsFrontEnd = async () => {
 	const blogs = await fetchBlogs();
+	function createMarkup() {
+		return { __html: "First &middot; Second" };
+	}
 	return (
 		<div className="container">
 			<div className="row">
@@ -16,7 +19,7 @@ const BlogsFrontEnd = async () => {
 								<h3>{blogitem.title}</h3>
 							</Link>
 							<p>
-								{blogitem.content.substr(0, 100)}
+								{blogitem.metaDesc.substr(0,50)}
 								<Link href={`/blogpost/${blogitem.slug}`}>
 									... Read More
 								</Link>

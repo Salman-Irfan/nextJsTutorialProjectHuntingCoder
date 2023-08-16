@@ -6,7 +6,9 @@ import styles from "../../../styles/appFolder/blog/blog.module.css"; // Import y
 
 const Blog = async ({ params }) => {
 	const myBlog = await fetchSpecificBlog(params); // Pass params to the function
-
+	function createMarkup(c) {
+		return { __html: c };
+	}
 	return (
 		<div className={`container text-center ${styles.blogContainer}`}>
 			<h1
@@ -32,9 +34,11 @@ const Blog = async ({ params }) => {
 						myBlog ? styles.textLoaded : ""
 					}`}>
 					{myBlog ? (
-						<span className={`${styles.textLoaded}`}>
-							{myBlog.content}
-						</span>
+						<span
+							className={`${styles.textLoaded}`}
+							dangerouslySetInnerHTML={createMarkup(
+								myBlog.content
+							)}></span>
 					) : (
 						<span className={`${styles.textLoading}`}>
 							Loading content...
